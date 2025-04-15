@@ -22,16 +22,19 @@ def main():
             if event.type == pg.QUIT: return
         key_lst = pg.key.get_pressed()
         # print(key_lst, [pg.K_UP])
+        h=0
+        v=0
         if key_lst[pg.K_UP]:
-            kk_rct.move_ip((0,-1))
+            h=-1
+            v=-1
         elif key_lst[pg.K_DOWN]:
-            h=0
-            v=1            
+            h=-1
+            v=+1            
         elif key_lst[pg.K_LEFT]:
             h=-2
             v=0
         elif key_lst[pg.K_RIGHT]:
-            h=1
+            h=+1
             v=0
                 
         elif not key_lst[pg.K_RIGHT]:
